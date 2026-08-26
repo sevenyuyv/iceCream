@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "icecream",
+	"version": "${version}",
+	"name": "iceCream",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/icecream/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.dpdns.sevenyuyv.icecream.IceCream"
+		],
+		"client": [
+			"org.dpdns.sevenyuyv.icecream.client.IceCreamClient"
+		],
+		"fabric-datagen": [
+			"org.dpdns.sevenyuyv.icecream.client.IceCreamDataGenerator"
+		]
+	},
+	"mixins": [
+		"icecream.mixins.json",
+		{
+			"config": "icecream.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
