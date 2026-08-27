@@ -20,7 +20,7 @@
 			"org.dpdns.sevenyuyv.icecream.IceCream"
 		],
 		"client": [
-			"org.dpdns.sevenyuyv.icecream.client.creamClient"
+			"org.dpdns.sevenyuyv.icecream.client.IceCreamClient"
 		]
 	},
 	"depends": {

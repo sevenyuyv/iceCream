@@ -1,54 +1,48 @@
 package org.dpdns.sevenyuyv.icecream.registry;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.dpdns.sevenyuyv.icecream.IceCream;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
+import java.util.function.Function;
 
-public class ModItems {
+public final class ModItems {
+    private ModItems() {}
 
-    public static final FoodComponent ORIGINAL_POPSICLE_FOOD;
-    public static final FoodComponent ORIGINAL_ICE_CREAM_FOOD;
-    public static final FoodComponent CONE_FOOD;
+    // 定义所有食物属性组件
+    public static final FoodComponent ORIGINAL_POPSICLE_FOOD = new FoodComponent.Builder()
+            .nutrition(2)
+            .saturationModifier(0.5f)
+            .build();
 
-    public static final Item CREAM;
-    public static final Item ORIGINAL_POPSICLE;
-    public static final Item ORIGINAL_ICE_CREAM;
-    public static final Item CONE;
+    public static final FoodComponent ORIGINAL_ICE_CREAM_FOOD = new FoodComponent.Builder()
+            .nutrition(2)
+            .saturationModifier(1.0f)
+            .build();
 
-    // 静态块延迟执行实例化，保证时序安全
-    static {
-        ORIGINAL_POPSICLE_FOOD = new FoodComponent.Builder()
-                .nutrition(2)
-                .saturationModifier(0.5f)
-                .build();
+    public static final FoodComponent CONE_FOOD = new FoodComponent.Builder()
+            .nutrition(1)
+            .saturationModifier(0.5f)
+            .build();
 
-        ORIGINAL_ICE_CREAM_FOOD = new FoodComponent.Builder()
-                .nutrition(2)
-                .saturationModifier(1.0f)
-                .build();
+    // 注册所有物品，严格匹配官方规范的泛型签名
+    public static final Item CREAM = register("cream", Item::new, new Item.Settings());
+    public static final Item ORIGINAL_POPSICLE = register("original_popsicle", Item::new,
+            new Item.Settings().component(DataComponentTypes.FOOD, ORIGINAL_POPSICLE_FOOD));
+    public static final Item ORIGINAL_ICE_CREAM = register("original_ice_cream", Item::new,
+            new Item.Settings().component(DataComponentTypes.FOOD, ORIGINAL_ICE_CREAM_FOOD));
+    public static final Item CONE = register("cone", Item::new,
+            new Item.Settings().component(DataComponentTypes.FOOD, CONE_FOOD));
 
-        CONE_FOOD = new FoodComponent.Builder()
-                .nutrition(1)
-                .saturationModifier(0.5f)
-                .build();
-
-        CREAM = new Item(new Item.Settings());
-        ORIGINAL_POPSICLE = new Item(new Item.Settings()
-                .component(DataComponentTypes.FOOD, ORIGINAL_POPSICLE_FOOD));
-        ORIGINAL_ICE_CREAM = new Item(new Item.Settings()
-                .component(DataComponentTypes.FOOD, ORIGINAL_ICE_CREAM_FOOD));
-        CONE = new Item(new Item.Settings()
-                .component(DataComponentTypes.FOOD, CONE_FOOD));
+    public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
+        final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(IceCream.MOD_ID, path));
+        return Items.register(registryKey, factory, settings);
     }
 
-    public static void register() {
-        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "cream"), CREAM);
-        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "original_popsicle"), ORIGINAL_POPSICLE);
-        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "original_ice_cream"), ORIGINAL_ICE_CREAM);
-        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "cone"), CONE);
-    }
+    public static void initialize() {}
 }
