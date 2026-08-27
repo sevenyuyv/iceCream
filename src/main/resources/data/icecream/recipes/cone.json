@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W",
+    "E",
+  ],
+  "key": {
+    "W": {"item": "minecraft:wheat"},
+    "E": {"item": "minecraft:egg"}
+  },
+  "result": {
+    "id": "icecream:cone",
+    "count": 2
+  }
+}

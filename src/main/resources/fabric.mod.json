@@ -16,22 +16,12 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.dpdns.sevenyuyv.icecream.IceCream"
+			"org.dpdns.sevenyuyv.icecream.cream"
 		],
 		"client": [
-			"org.dpdns.sevenyuyv.icecream.client.IceCreamClient"
-		],
-		"fabric-datagen": [
-			"org.dpdns.sevenyuyv.icecream.client.IceCreamDataGenerator"
+			"org.dpdns.sevenyuyv.icecream.client.creamClient"
 		]
 	},
-	"mixins": [
-		"icecream.mixins.json",
-		{
-			"config": "icecream.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~1.21.9",
