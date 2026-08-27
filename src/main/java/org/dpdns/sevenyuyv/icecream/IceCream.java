@@ -12,11 +12,15 @@ public class IceCream implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// 注册物品
+		// 手动触发ModItems类加载，确保在安全时序下完成所有物品实例初始化
+		try {
+			Class.forName(ModItems.class.getName());
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("Failed to load ModItems class", e);
+		}
+		// 后续再执行注册、配方加载等逻辑
 		ModItems.register();
-		// 注册配方
 		ModRecipes.register();
-
 		LOGGER.info("Ice Cream Mod initialized! Cream registered.");
 	}
 }
