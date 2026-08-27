@@ -9,12 +9,14 @@ import org.dpdns.sevenyuyv.icecream.cream;
 public class ModItems {
 
     public static final Item CREAM = new Item(new Item.Settings());
-    public static final Item ORIGINAL_POPSICLE = new Item(new Item.Settings());
-    public static final Item ORIGINAL_ICE_CREAM = new Item(new Item.Settings());
+    public static final Item ORIGINAL_POPSICLE = new Item(new Item.Settings().food(Food.Builder.create() .nutrition(2) .saturationModifier(0.5f).build()));
+    public static final Item ORIGINAL_ICE_CREAM = new Item(new Item.Settings().food(Food.Builder.create() .nutrition(2) .saturationModifier(1).build()));
+    public static final Item CONE = new Item(new Item.Settings().food(Food.Builder.create() .nutrition(1) .saturationModifier(0.5f).build()));
 
     public static void register() {
         Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "cream"), CREAM);
         Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "original_popsicle"), ORIGINAL_POPSICLE);
         Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "original_ice_cream"), ORIGINAL_ICE_CREAM);
+        Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "cone"), CONE);
     }
 }
