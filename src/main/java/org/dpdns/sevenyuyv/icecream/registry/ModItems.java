@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import org.dpdns.sevenyuyv.icecream.cream;
+import org.dpdns.sevenyuyv.icecream.IceCream;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
 
@@ -40,9 +40,9 @@ public class ModItems {
             .component(DataComponentTypes.FOOD, CONE_FOOD));
 
     public static void register() {
-        Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "cream"), CREAM);
-        Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "original_popsicle"), ORIGINAL_POPSICLE);
-        Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "original_ice_cream"), ORIGINAL_ICE_CREAM);
-        Registry.register(Registries.ITEM, Identifier.of(cream.MOD_ID, "cone"), CONE);
+        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "cream"), CREAM);
+        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "original_popsicle"), ORIGINAL_POPSICLE);
+        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "original_ice_cream"), ORIGINAL_ICE_CREAM);
+        Registry.register(Registries.ITEM, Identifier.of(IceCream.MOD_ID, "cone"), CONE);
     }
 }

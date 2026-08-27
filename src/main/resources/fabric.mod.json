@@ -3,20 +3,21 @@
 	"id": "icecream",
 	"version": "${version}",
 	"name": "iceCream",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "There are so many ice creams!",
 	"authors": [
-		"Me!"
+		"sevenyuyv"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/iceCream",
+		"sources": "https://github.com/sevenyuyv/iceCream",
+		"issues": "https://sevenyuyv.dpdns.org"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/icecream/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.dpdns.sevenyuyv.icecream.cream"
+			"org.dpdns.sevenyuyv.icecream.IceCream"
 		],
 		"client": [
 			"org.dpdns.sevenyuyv.icecream.client.creamClient"

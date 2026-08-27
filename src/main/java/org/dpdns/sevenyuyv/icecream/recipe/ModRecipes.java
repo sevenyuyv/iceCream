@@ -1,6 +1,6 @@
 package org.dpdns.sevenyuyv.icecream.recipe;
 
-import org.dpdns.sevenyuyv.icecream.cream;
+import org.dpdns.sevenyuyv.icecream.IceCream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
