@@ -7,8 +7,11 @@
 	"authors": [
 		"sevenyuyv"
 	],
+	"assets": {
+		"icecream": "assets/icecream"
+	},
 	"contact": {
-		"homepage": "https://modrinth.com/mod/iceCream",
+		"homepage": "https://modrinth.com/mod/_ice-ream_",
 		"sources": "https://github.com/sevenyuyv/iceCream",
 		"issues": "https://sevenyuyv.dpdns.org"
 	},

@@ -1,1 +1,6 @@
-{"model":{"type":"model","model":"icecream:item/cone"}}
+{
+  "model":{
+    "type":"minecraft:model",
+    "model":"icecream:item/cone"
+  }
+}

@@ -3,14 +3,14 @@
   "category": "misc",
   "pattern": [
     "W",
-    "E",
+    "E"
   ],
   "key": {
-    "W": {"item": "minecraft:wheat"},
-    "E": {"item": "minecraft:egg"}
+    "W": "minecraft:wheat",
+    "E": "minecraft:egg"
   },
   "result": {
-    "id": "icecream:cone",
-    "count": 2
+    "count": 2,
+    "id": "icecream:cone"
   }
 }

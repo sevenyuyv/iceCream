@@ -1,1 +1,6 @@
-{"model":{"type":"model","model":"icecream:item/original_ice_cream"}}
+{
+  "model":{
+    "type":"minecraft:model",
+    "model":"icecream:item/original_ice_cream"
+  }
+}

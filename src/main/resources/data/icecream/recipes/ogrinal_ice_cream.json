@@ -7,9 +7,9 @@
     "S"
   ],
   "key": {
-    "C": {"item": "icecream:cream"},
-    "I": {"item": "minecraft:ice"},
-    "S": {"item": "icecream:cone"}
+    "C": "icecream:cream",
+    "I": "minecraft:ice",
+    "S": "icecream:cone"
   },
   "result": {
     "id": "icecream:original_popsicle",
