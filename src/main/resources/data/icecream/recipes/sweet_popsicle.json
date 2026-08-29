@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C",
+    "I",
+    "S"
+  ],
+  "key": {
+    "C": "minecraft:sugar",
+    "I": "minecraft:ice",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "icecream:sweet_popsicle",
+    "count": 1
+  }
+}
