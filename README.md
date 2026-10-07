@@ -1,2 +1,2 @@
 # iceCream
-A minecraft mod and it is still being developed.https://modrinth.com/mod/_ice-cream_
+A minecraft mod and it is still being developed.[modrinth](https://modrinth.com/mod/_icecream_)
